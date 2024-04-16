@@ -38,17 +38,12 @@ El proyecto está organizado en varios módulos, cada uno con una funcionalidad 
 El enfoque de esta primera parte del proyecto esta pensada para realizar Test Unitarios, por lo que se ha creado un archivo `main.py` para realizar pruebas de los modelos creados. A continuación, se muestra un ejemplo de cómo utilizar los modelos creados en el proyecto:
   
   ```python
-
-
-
-
 ## Pruebas
 
 Para ejecutar las pruebas, navega al directorio de pruebas y ejecuta `python .\main.py`.
 ```
+<img src="tests.png">
 
 ## Licencia
 
 Este proyecto fue desarrollado por *Jeronimo Riveros* y *Daniel Rosas* con fines de aprendizaje. Puedes utilizar el código de este proyecto para tus propios fines, pero no puedes utilizarlo con fines comerciales.
-
- 
