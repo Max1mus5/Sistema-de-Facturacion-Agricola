@@ -5,6 +5,38 @@ class Antibiotic():
         self.antibioticPrice = float(antibioticPrice)
         self.antibioticDosis = self.validate_dosis(antibioticDosis)
 
+    @property
+    def antibioticName(self):
+        return self._antibioticName
+    
+    @antibioticName.setter
+    def antibioticName(self, value):
+        self._antibioticName = value
+
+    @property
+    def antibioticObjectPoblation(self):
+        return self._antibioticObjectPoblation
+    
+    @antibioticObjectPoblation.setter
+    def antibioticObjectPoblation(self, value):
+        self._antibioticObjectPoblation = value
+
+    @property
+    def antibioticPrice(self):
+        return self._antibioticPrice
+    
+    @antibioticPrice.setter
+    def antibioticPrice(self, value):
+        self._antibioticPrice = value
+
+    @property
+    def antibioticDosis(self):
+        return self._antibioticDosis
+    
+    @antibioticDosis.setter
+    def antibioticDosis(self, value):
+        self._antibioticDosis = value
+
     def validate_poblation(self, poblation):
         valid_poblations = ["Bovinos", "Caprinos", "Porcinos"]
         if poblation not in valid_poblations:

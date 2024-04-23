@@ -22,6 +22,30 @@ class Bill():
             raise ValueError("billProductList debe ser una lista")
         self._billProductList = value
 
+    @property
+    def billId(self):
+        return self._billId
+    
+    @billId.setter
+    def billId(self, value):
+        self._billId = value
+
+    @property
+    def billDate(self):
+        return self._billDate
+    
+    @billDate.setter
+    def billDate(self, value):
+        self._billDate = value
+
+    @property
+    def billAmount(self):
+        return self._billAmount
+    
+    @billAmount.setter
+    def billAmount(self, value):
+        self._billAmount = value
+
     def add_product(self, product):
         #add product to the list of products
         self._billProductList.append(product)
