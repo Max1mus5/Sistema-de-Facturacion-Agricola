@@ -43,6 +43,10 @@ Para ejecutar las pruebas, navega al directorio de pruebas y ejecuta `python .\m
 ```
 <img src="./img/tests.png">
 
+se ha realizado un debub para ver la relacion entre los objetos y verificar que se esten creando correctamente ademas de estar relacionados de la forma correcta.
+
+<img src="./img/debug.png">
+
 ## Licencia
 
 Este proyecto fue desarrollado por *Jeronimo Riveros* y *Daniel Rosas* con fines de aprendizaje. Puedes utilizar el código de este proyecto para tus propios fines, pero no puedes utilizarlo con fines comerciales.
