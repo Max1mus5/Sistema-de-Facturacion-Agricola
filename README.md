@@ -13,8 +13,7 @@ Para tener una vision mas global ver el diagrama de clases:
 
 Antes de comenzar, asegúrate de cumplir con los siguientes requisitos:
 
-- Tener instalada la última versión de Python.
-- Tener un conocimiento básico de programación en Python.
+- Tener instalado Python.
 
 ### Instalación
 
