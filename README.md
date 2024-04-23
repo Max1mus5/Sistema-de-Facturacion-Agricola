@@ -42,7 +42,7 @@ El enfoque de esta primera parte del proyecto esta pensada para realizar Test Un
 
 Para ejecutar las pruebas, navega al directorio de pruebas y ejecuta `python .\main.py`.
 ```
-<img src="tests.png">
+<img src="./img/tests.png">
 
 ## Licencia
 
