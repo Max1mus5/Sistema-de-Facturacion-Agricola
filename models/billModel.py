@@ -3,12 +3,9 @@ from models.productControlModel import ProductControl
 from models.antibioticsModel import Antibiotic
 
 class Bill():
-    def __init__(self, billId, billDate, billProductList=None, billAmount=0.0):
+    def __init__(self, billId, billProductList=None, billAmount=0.0):
         self.billId = int(billId)
-        if isinstance(billDate, str):
-            self.billDate = datetime.strptime(billDate, '%Y-%m-%d %H:%M:%S')
-        else:
-            self.billDate = billDate
+        self.billDate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self._billProductList = billProductList if billProductList is not None else []
         self.billAmount = float(billAmount)
 
