@@ -225,6 +225,7 @@ class Crud:
           for bill in client.billHistory:
             if bill.billId == billId:
               Crud.Bill.view_bill(bill)
+              return bill
             else:
               print("No bills found")
           
