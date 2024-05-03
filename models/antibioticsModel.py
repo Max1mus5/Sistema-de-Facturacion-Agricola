@@ -1,9 +1,9 @@
 class Antibiotic():
     def __init__(self, antibioticName, antibioticObjectPoblation, antibioticPrice, antibioticDosis):
-        self.antibioticName = str(antibioticName)
-        self.antibioticObjectPoblation = self.validate_poblation(antibioticObjectPoblation)
-        self.antibioticPrice = float(antibioticPrice)
-        self.antibioticDosis = self.validate_dosis(antibioticDosis)
+        self._antibioticName = str(antibioticName)
+        self._antibioticObjectPoblation = self.validate_poblation(antibioticObjectPoblation)
+        self._antibioticPrice = float(antibioticPrice)
+        self._antibioticDosis = int(antibioticDosis)
 
     @property
     def antibioticName(self):
@@ -27,7 +27,7 @@ class Antibiotic():
     
     @antibioticPrice.setter
     def antibioticPrice(self, value):
-        self._antibioticPrice = value
+        self._antibioticPrice = self.validate_dosis(value)
 
     @property
     def antibioticDosis(self):
@@ -40,6 +40,7 @@ class Antibiotic():
     def validate_poblation(self, poblation):
         valid_poblations = ["Bovinos", "Caprinos", "Porcinos"]
         if poblation not in valid_poblations:
+            print(poblation)
             raise ValueError(f"La población objetivo debe ser una de las siguientes: {', '.join(valid_poblations)}")
         return poblation
 

@@ -1,2 +1,0 @@
-1,jero,[<models.billModel.Bill object at 0x0000024872B78E50>]
-123456,MAICOL,[<models.billModel.Bill object at 0x0000024872B78E50>]

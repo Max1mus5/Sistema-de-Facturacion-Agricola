@@ -3,11 +3,11 @@ from models.productControlModel import ProductControl
 from models.antibioticsModel import Antibiotic
 
 class Bill():
-    def __init__(self, billId, billProductList=None, billAmount=0.0):
+    def __init__(self, billId, billProductList, billAmount=0.0):
         self.billId = int(billId)
         self.billDate = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         self._billProductList = billProductList if billProductList is not None else []
-        self.billAmount = float(billAmount)
+        self.billAmount = float(self.calculate_subtotal())
 
     @property
     def billProductList(self):
@@ -44,26 +44,21 @@ class Bill():
         self._billAmount = value
 
     def add_product(self, product):
-        #add product to the list of products
         self._billProductList.append(product)
+        self.calculate_subtotal()
+        return self
 
-    def remove_product(self, product):
-        #remove product from the list of products
-        if product in self._billProductList:
-            self._billProductList.remove(product)
-        else:
-            raise ValueError("El producto no se encuentra en la lista de productos de la factura")
-
+    
     def calculate_subtotal(self):
-        # Calculate the subtotal by summing the price of each product
-        subtotal = 0
-        for product in self._billProductList:
-            if isinstance(product, ProductControl):
-                subtotal += product.productPrice
-            elif isinstance(product, Antibiotic):
-                subtotal += product.antibioticPrice
-        return subtotal
-       
-    def calculate_total(self):
-        # Calculate the total by summing the subtotal and the bill amount
-        return self.calculate_subtotal() + self.billAmount
+      # Calculate the subtotal by summing the price of each product
+      subtotal = 0
+      for product in self._billProductList:
+        if isinstance(product, ProductControl):
+          subtotal += product.productPrice
+        elif isinstance(product, Antibiotic):
+          subtotal += product.antibioticPrice
+      self.billAmount = subtotal
+      return subtotal
+
+
+    

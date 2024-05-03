@@ -1,9 +1,9 @@
 from models.productControlModel import ProductControl as ProductControlModel
 
 class PlagueProductControl(ProductControlModel):
-    def __init__(self, productName, productNumIca, productDailyFrecuency, productPrice, plagyeCarencyPeriod):
+    def __init__(self, productName, productNumIca, productDailyFrecuency, productPrice, plagueCarencyPeriod):
         super().__init__(productName, productNumIca, productDailyFrecuency, productPrice)
-        self.plagueSpecificAttribute =  str(plagyeCarencyPeriod)
+        self.plagueSpecificAttribute =  str(plagueCarencyPeriod)
 
     #define properties and setters for the new attribute
     @property
