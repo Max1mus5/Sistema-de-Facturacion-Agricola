@@ -1,11 +1,16 @@
 # Sistema de Facturación Agrícola
 
+## Tabla de Contenidos
+
+- [Parte 1](#estructura-del-proyecto)
+- [Parte 2](#añadiendo-interfaces)
+
 ## Introducción
 
 Este proyecto es un sistema de facturación diseñado para una tienda agrícola que maneja productos de control (fertilizantes y controles de plagas) y medicina para animales de granja, específicamente antibióticos. El sistema permite gestionar pedidos (o facturas) que están compuestos por los productos que serán comprados, facilitando el proceso de venta y la gestión de inventario.
 
 Para tener una vision mas global ver el diagrama de clases:
-<img src="Uml Class Diagram.png">
+<img src="./img/Diagrama de Clases.png">
 
 ## Requerimientos
 
@@ -46,6 +51,23 @@ Para ejecutar las pruebas, navega al directorio de pruebas y ejecuta `python .\m
 se ha realizado un debub para ver la relacion entre los objetos y verificar que se esten creando correctamente ademas de estar relacionados de la forma correcta.
 
 <img src="./img/debug.png">
+
+
+
+## Añadiendo Interfaces
+para esta parte del proyecto se han añadido interfaces con el fin de aumentar la modularizacion del codigo, asi como su escalabilidad
+
+### *Diagrama de Componentes con Implementacion de Interfaces*
+<img src="./img/Diagrama de componentes Con Interfaces.png">
+
+Cabe hacer una aclaración: *el llamado del "Crud" en el Main unicamente tiene como objetivo la "creacion" de la tienda*
+
+Esta seria La Estrucura Del Proyecto con la implementacion de Interfaces
+<img src="./img/EstructuraConInterfaces.png">
+
+
+Corto Ejemplo De como implementamos las interfaces en el proyecto
+<img src="./img/Ejemplo Implementacion de Interfaz.png">
 
 ## Licencia
 
