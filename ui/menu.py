@@ -80,8 +80,9 @@ class Menu():
         #region segunda Opcion
 
     def second_menu_option(self):
+        import random
         print("Crear una factura")
-        billId = input("Ingrese el id de la factura: ")
+        billId = random.randint(1, 1000)
         billProductList = []
         bill = Crud.Bill().create(billId, billProductList)
         self.client = Crud.Client().addBill(self.client, bill)

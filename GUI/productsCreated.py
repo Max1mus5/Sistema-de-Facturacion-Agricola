@@ -1,5 +1,5 @@
-""" from ui.menu import Menu
 from app.app import Crud 
+
 
 #crear productos de para la tienda
 store = []
@@ -23,22 +23,3 @@ storeAntibiotics.append(Crud.Store().create_antibiotic("penicilina", "Bovinos", 
 storeAntibiotics.append(Crud.Store().create_antibiotic("amoxicilina", "Caprinos", 12000.5, 500))
 storeAntibiotics.append(Crud.Store().create_antibiotic("cefalosporina", "Porcinos", 5000.2, 599))
 storeAntibiotics.append(Crud.Store().create_antibiotic("tetraciclina", "Bovinos", 10000.1, 505))
-
-clientlist = []
-options = Menu()
-op = options
-
-while op!= 10:
-    op = options.show_menu()
-    options.seleccionar_opcion(opcion=op, store=store, storeAntibiotics=storeAntibiotics) """
-
-
-""" tests for  the app: python -m unittest testing.appTest """
-
-import sys
-from PyQt6.QtWidgets import QApplication
-from GUI.GUI import TiendaDeProductosAgricolas  # Asegúrate de que la ruta de importación sea correcta
-
-app = QApplication(sys.argv)
-window = TiendaDeProductosAgricolas()  # Crea una instancia de la clase TiendaDeProductosAgricolas
-sys.exit(app.exec())

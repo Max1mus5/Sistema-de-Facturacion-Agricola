@@ -16,15 +16,27 @@ class Crud:
         super().__init__()
         self.client=None
     
-    def create(self, name, identificationNumber):
-        self.client = Client(name, identificationNumber)
-        return self.client
+    def create(self, name, identificationNumber, clientList):
+        if not name or not identificationNumber:
+          return "No fue posible crear el cliente"
+        else:
+          #verify if the client already exists, if not, create it, else return the client
+          if not self.buscarCliente(clientList, identificationNumber):
+            client = Client(name, identificationNumber)
+            return client
+          else:
+            return self.buscarCliente(clientList, identificationNumber)
     
     def buscarCliente(self, clientList, identificationNumber):
         for client in clientList:
           if client.identificationNumber == identificationNumber:
-            self.client = client
-            return self.client
+            return client
+        
+    
+    def searchBillInClient(self, client, billId):
+        for bill in client.billHistory:
+          if bill.billId == billId:
+            return bill
         return None
     
     def addBill ( self, client, bill):
@@ -38,11 +50,12 @@ class Crud:
 
     def updateBill(self, client, bill, billId):
         self.client = client
-        for bill in self.client.billHistory:
-          if bill.billId == billId:
-            self.client.billHistory.remove(bill)
-            self.client.billHistory.append(bill)
-          else:
+        try:
+          for bill in self.client.billHistory:
+            if bill.billId == billId:
+              self.client.billHistory.remove(bill)
+              self.client.billHistory.append(bill)
+        except:
             raise ValueError("La factura no existe")
         return self.client
     
@@ -64,7 +77,6 @@ class Crud:
         return self.client
 
     def view_bill(self, client, billId):
-        print(client.billHistory)
         if len(client.billHistory) == 0:
           print("No bills found")
         else: 
@@ -102,10 +114,12 @@ class Crud:
               if isinstance(productToDelete, ProductControl):
                 print("Se Borrara el producto:", productToDelete.productName)
                 bill.billProductList.remove(productToDelete)
+                break
 
               if isinstance(productToDelete, Antibiotic):
                 print("Se Borrara el producto:", productToDelete.antibioticName)
                 bill.billProductList.remove(productToDelete)
+                break
               
               else:
                 raise ValueError("El producto es de tipo:", )
@@ -126,6 +140,7 @@ class Crud:
           elif isinstance(product, Antibiotic):
             products += f"{product.antibioticName}, "
         print(f"Factura: {bill.billId}\nFecha: {bill.billDate}\nMonto: {bill.billAmount}\nProductos: {products}\n---------------------------------------")
+        return products
     
     #region Store
 
