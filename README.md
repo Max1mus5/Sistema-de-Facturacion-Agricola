@@ -102,6 +102,19 @@ Sin embargo a comparacion que en la parte 2, en esta parte se ha creado un archi
 ## Diagrama de Clases con Implementacion de GUI
 <img src="./img/DiagramaClasesGUIAplicadA.png">
 
+## Resultado de la Interfaz Grafica
+- **MENU**
+<img src="./img/GUI-MENU.png">
+
+- **VER PRODUCTOS**
+<img src="./img/GUI-VERPRODUCTOS.png">
+
+- **Crear Cliente**
+<img src="./img/GUI-CrearCLiente.png">
+- **Mensajes**
+<img src="./img/GUI-MENSAJES.png">
+
+
 
 ## Licencia
 
