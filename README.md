@@ -69,6 +69,39 @@ Esta seria La Estrucura Del Proyecto con la implementacion de Interfaces
 Corto Ejemplo De como implementamos las interfaces en el proyecto
 <img src="./img/Ejemplo Implementacion de Interfaz.png">
 
+# GUI (Graphical User Interface)
+**NOTA IMPORTANTE**: para esta Parte 3 es importante Instalar el archivo "requirements.txt" para poder ejecutar el proyecto correctamente.
+
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+Para la 3er parte de este proyecto se ha pedido desarrollar una interfaz grafica para el sistema de facturacion agricola, para ello se ha utilizado como herramienta a [QT Designter](https://doc.qt.io/qt-6/qtdesigner-manual.html), la cual nos permite crear interfaces graficas desde un entorno grafico y luego exportarlas a un archivo .ui que podremos utilizar en nuestro proyecto creando los cada vista en un archivo ".py".
+
+- *Aspectos positivos de esta herramienta:*
+  - Facilidad de uso
+  - Rapidez en la creacion de interfaces
+  - Facilidad de exportar a un archivo .ui
+  - Facilidad de crear a un archivo .py
+  - Sirve de mucho ya que ayuda a modularizar el codigo y a tener una mejor organizacion del proyecto
+
+Puedes Ver los archivos ".ui" en [Esta Carpeta](./GUI/QT%20Designs/)
+
+## Estructura del Proyecto con GUI
+Se utilizo una estructura donde se llamara al componente de GUI desde el main para asi ejecutar las interfaz Grafica.
+Este Componente "GUI" esta estructurado de la siguiente manera:
+<img src="./img/Estructura GUI.png">
+
+Sin embargo a comparacion que en la parte 2, en esta parte se ha creado un archivo "productsCreated.py" que es en donde estamos creando la tienda como tal, es decir, estamos creando los productos que se venderan en la tienda. De esta forma no creamos nada en el main y solo llamamos a la interfaz grafica.
+
+## Diagrama de Componentes con Implementacion de GUI
+<img src="./img/DiagramaClasesGUI.png">
+
+## Diagrama de Clases con Implementacion de GUI
+<img src="./img/DiagramaClasesGUIAplicada.png">
+
+
 ## Licencia
 
 Este proyecto fue desarrollado por *Jeronimo Riveros* y *Daniel Rosas* con fines de aprendizaje. Puedes utilizar el código de este proyecto para tus propios fines, pero no puedes utilizarlo con fines comerciales.
