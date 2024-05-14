@@ -4,6 +4,7 @@
 
 - [Parte 1](#estructura-del-proyecto)
 - [Parte 2](#añadiendo-interfaces)
+- [Parte 3](#gui-graphical-user-interface)
 
 ## Introducción
 
@@ -99,7 +100,7 @@ Sin embargo a comparacion que en la parte 2, en esta parte se ha creado un archi
 <img src="./img/DiagramaClasesGUI.png">
 
 ## Diagrama de Clases con Implementacion de GUI
-<img src="./img/DiagramaClasesGUIAplicada.png">
+<img src="./img/DiagramaClasesGUIAplicadA.png">
 
 
 ## Licencia
