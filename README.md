@@ -100,7 +100,7 @@ Sin embargo a comparacion que en la parte 2, en esta parte se ha creado un archi
 <img src="./img/DiagramaClasesGUI.png">
 
 ## Diagrama de Clases con Implementacion de GUI
-<img src="./img/DiagramaClasesGUIAplicadA.png">
+<img src="./img/DiagramaClasesGUIAplicada.png">
 
 ## Resultado de la Interfaz Grafica
 - **MENU**
