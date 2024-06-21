@@ -1,5 +1,5 @@
 ## Agricultural Billing System
-[Spanish](README-ES.md)
+[Spanish](README.md)
 [English](README-EN.md)
 ## Table of Contents
 - [Part 1](#project-structure)
