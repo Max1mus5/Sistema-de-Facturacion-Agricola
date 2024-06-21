@@ -1,5 +1,6 @@
 # Sistema de Facturación Agrícola
-
+[Español](README-ES.md)
+[Ingles](README-EN.md)
 ## Tabla de Contenidos
 
 - [Parte 1](#estructura-del-proyecto)
